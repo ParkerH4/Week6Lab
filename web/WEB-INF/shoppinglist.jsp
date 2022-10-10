@@ -17,8 +17,8 @@
         <p>Hello ${username}</p>
         <p><a href = "ShoppingList?action=logout">Logout</a></p>
 
-        <form action="" method ="POST"
-              <h2>Add Item</h2>
+        <form action="" method ="POST">
+              <h2>Add Items</h2>
             <input type  ="text" name="item">
             <input type ="submit" value ="Add Item">
             <input type  ="hidden" name="action" value ="add">
@@ -31,7 +31,7 @@
                 </c:forEach>
             </ul>
 
-            <input type  ="submit"  value ="delete">
+            <input type  ="submit"  value ="Delete">
             <input type  ="hidden" name="action" value ="delete">
 
         </form>
