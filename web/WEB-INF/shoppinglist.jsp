@@ -17,24 +17,24 @@
         <p>Hello ${username}</p>
         <p><a href = "ShoppingList?action=logout">Logout</a></p>
 
-        <form action="ShoppingList?action=add" method ="POST"
+        <form action="" method ="POST"
               <h2>Add Item</h2>
             <input type  ="text" name="item">
             <input type ="submit" value ="Add Item">
             <input type  ="hidden" name="action" value ="add">
         </form>
 
-        <form action="ShoppingList?action=delete"method="post">
-            
-            <c:forEach var ="item" items="${item}">
-                <li> <input type  ="radio" name="item" value =${item}>${item}</li>
-            </c:forEach>
-      
-           
+        <form action=""method="POST">
+            <ul>
+                <c:forEach var ="item" items="${itemList}">
+                    <li> <input type  ="radio" name="item" value ="${item}">${item}</li>
+                </c:forEach>
+            </ul>
+
             <input type  ="submit"  value ="delete">
             <input type  ="hidden" name="action" value ="delete">
 
         </form>
-         <div>${message}</div>
+        <div>${message}</div>
     </body>
 </html>
